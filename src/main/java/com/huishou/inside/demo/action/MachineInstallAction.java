@@ -7,9 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+
+import java.util.*;
+
+
 @CrossOrigin
 @RestController
 public class MachineInstallAction {
@@ -33,21 +34,40 @@ public class MachineInstallAction {
         return beanJsonReturn;
     }
     @RequestMapping("/machine/TitleList")
-    public BeanJsonReturn getTitleList(Integer current,Integer pagestep,String city,String villages,String Community){
+    public BeanJsonReturn getTitleList(Integer current,Integer pagestep,String site){
         List titleListStep=null;
         current=current+2;
         switch (pagestep){
             case 0:titleListStep = machineInstallMapper.getTitleListStep0(current);break;
-            case 1:titleListStep = machineInstallMapper.getTitleListStep1(current,city);break;
-            case 2:titleListStep = machineInstallMapper.getTitleListStep2(current,city,villages);break;
-            case 3:titleListStep = machineInstallMapper.getTitleListStep3(current,city,villages,Community);break;
+            case 1:titleListStep = machineInstallMapper.getTitleListStep1(current,site);break;
             default:titleListStep=null;break;
         }
+        List<Map<String, Object>> stepCount = machineInstallMapper.getStepCount();
+        List<String> list = new ArrayList<>();
+        list.add("已选点");
+        list.add("地坪中");
+        list.add("待安装");
+        list.add("待调试");
+        list.add("已上线");
+
+            for (Map<String,Object> m:stepCount) {
+                Integer title = Integer.valueOf(m.get("title").toString());
+                switch (title){
+                    case 2 :list.set(0,"已选点"+m.get("count"));break;
+                    case 3 :list.set(1,"地坪中"+m.get("count"));break;
+                    case 4 :list.set(2,"待安装"+m.get("count"));break;
+                    case 5 :list.set(3,"待调试"+m.get("count"));break;
+                    case 6 :list.set(4,"已上线"+m.get("count"));break;
+                }
+            }
 
 
+        Map paramMap=new HashMap();
+        paramMap.put("steplist",list);
+        paramMap.put("title",titleListStep);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
         beanJsonReturn.setErrcode("0");
-        beanJsonReturn.setParamList(titleListStep);
+        beanJsonReturn.setParamMap(paramMap);
         return beanJsonReturn;
     }
     @RequestMapping("/machine/selectverify")
@@ -59,11 +79,8 @@ public class MachineInstallAction {
         return beanJsonReturn;
     }
     @RequestMapping("/machine/setselectverify")
-    public  BeanJsonReturn setSelectverify(String id, String remark,String step,String longitude,String latitude){
-        String terrace_progress="无需安装";
-        if (step.equals(3)){
-            terrace_progress="待安装";
-        }
+    public  BeanJsonReturn setSelectverify(String id, String remark,String step,String longitude,String latitude,String terrace_progress){
+
         machineInstallMapper.updateSelectVerify(id,remark,step,latitude,longitude,terrace_progress);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
         beanJsonReturn.setErrcode("0");
@@ -112,18 +129,27 @@ public class MachineInstallAction {
         return beanJsonReturn;
     }
     @RequestMapping("/machine/debug")
-    public BeanJsonReturn updatedebug(String id,String remark,String machineno){
-         machineInstallMapper.updatedebug(id,remark,machineno);
+    public BeanJsonReturn updatedebug(String id,String remark){
+         machineInstallMapper.updatedebug(id,remark);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
         beanJsonReturn.setErrcode("0");
         return beanJsonReturn;
     }
     @RequestMapping("/machine/install")
-    public BeanJsonReturn updateinstall(String id,String remark){
-        machineInstallMapper.updateinstall(id,remark);
+    public BeanJsonReturn updateinstall(String id,String remark,String machineno){
+        machineInstallMapper.updateinstall(id,remark,machineno);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
         beanJsonReturn.setErrcode("0");
         return beanJsonReturn;
     }
+    @RequestMapping("/machine/updaterepair")
+    public BeanJsonReturn updateRepair(String id){
+        String terrace_progress="地坪修复中";
+        machineInstallMapper.updateRepair(id,terrace_progress);
+        BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
+        beanJsonReturn.setErrcode("0");
+        return beanJsonReturn;
+    }
+
 
 }
