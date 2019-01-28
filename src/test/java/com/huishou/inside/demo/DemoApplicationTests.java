@@ -1,6 +1,7 @@
 package com.huishou.inside.demo;
 
 import com.huishou.inside.demo.Mapper.MachineInstallMapper;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,13 @@ import java.util.List;
 public class DemoApplicationTests {
     @Autowired
     MachineInstallMapper machineInstallMapper;
+
     @Test
     public void contextLoads() {
         List stepCount = machineInstallMapper.getStepCount();
         System.out.println(stepCount.toString());
+
+
     }
 
 }

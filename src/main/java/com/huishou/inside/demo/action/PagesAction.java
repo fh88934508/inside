@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PagesAction {
     @RequestMapping("/zyhs")
     public String index(){
-        return "zyhs.html";
+        return "zyhs1.html";
     }
 }
