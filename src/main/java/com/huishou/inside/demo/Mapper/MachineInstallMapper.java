@@ -17,7 +17,7 @@ public interface MachineInstallMapper {
 //    @Select("select t.order_no as title,'1' as count from m_install_record t where t.step=#{current} and t.city=#{city} and t.villages=#{villages} and t.Community=#{Community} ")
 //    List<Map<String,String>> getTitleListStep3(Integer current,String city,String villages,String Community);
 //    @Select("select t.order_no as title,'1' as count from m_install_record t where t.step=#{current}")
-//    List<Map<String,String>> getTitleListStep(Integer current);
+//    List<Map<String,String>> getTitleListStep(Integer current);55
     @Select("select t.id,t.city,t.villages,t.Community,t.order_no,DATE_FORMAT(t.select_date,'%Y-%m-%d %H:%i:%s') as select_date ,t.select_remark from m_install_record t where t.id=#{id}")
     Map<String,String> getSelectVerify(String id);
     @Update("update m_install_record t set t.step=#{step}, t.select_v_date=now(),t.terrace_progress=#{terrace_progress},t.select_v_remark=#{remark},t.latitude=#{latitude},t.longitude=#{longitude} where t.id=#{id}")
@@ -43,4 +43,16 @@ public interface MachineInstallMapper {
     void updateRepair(@Param("id")String id, @Param("terrace_progress")String terrace_progress);
     @Select("SELECT t.step AS title,count(1) as count FROM m_install_record  t GROUP BY t.step")
     List<Map<String,Object>> getStepCount();
+    @Insert("insert into m_install_record (id,step,city,villages,Community,area,site,select_date,status,select_remark,order_no,latitude,longitude) VALUES (#{id},4,#{city},#{villages},#{Community},#{area},#{site},now(),'正常',#{remark},(select concat('MI',year(now()),MONTH(now()),extract(day_second from now()))),#{latitude},#{longitude})")
+    void new2m_select(BeanMachineInstall beanMachineInstall);
+    @Update("UPDATE m_install_record t set t.step=6,t.installation_progress='完成',t.machine_no=#{machineno},t.installation_remark=#{remark},t.installation_date=NOW() where t.id=#{id}")
+    void new2m_install( @Param("id")String id, @Param("remark")String remark,@Param("machineno")String machineno);
+    @Select("select concat(t.city,'-',t.villages,'-',t.area,'-',t.Community,'-',t.site)  as title,t.order_no as order_no  from m_install_record t where t.step=4")
+    List<Map<String,String>> new2m_title1();
+    @Select("select concat(t.city,'-',t.villages,'-',t.area,'-',t.Community,'-',t.site)  as title,t.order_no as order_no  from m_install_record t where t.step=6")
+    List<Map<String,String>> new2m_title2();
+    @Update("update m_install_record t set t.machine_no=#{machine_no},t.city=#{city},t.villages=#{villages},t.area=#{area},t.Community=#{Community},t.site=#{site},t.latitude=#{latitude},t.longitude=#{longitude},t.select_remark=#{remark},t.installation_remark=#{installremark} where t.id=#{id}")
+    void new2m_modify(BeanMachineInstall beanMachineInstall);
+    @Select("select * from m_install_record t where t.id=#{id}")
+    Map<String, String> get2versiondetail(String id);
 }

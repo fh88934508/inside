@@ -5,6 +5,7 @@ import com.huishou.inside.demo.bean.BeanMachineInstall;
 import com.huishou.inside.demo.service.TokenVerifyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -60,8 +61,6 @@ public class MachineInstallAction {
                     case 6 :list.set(4,"已上线"+m.get("count"));break;
                 }
             }
-
-
         Map paramMap=new HashMap();
         paramMap.put("steplist",list);
         paramMap.put("title",titleListStep);
@@ -150,6 +149,78 @@ public class MachineInstallAction {
         beanJsonReturn.setErrcode("0");
         return beanJsonReturn;
     }
+
+    @RequestMapping("/2version/m_select")
+    public BeanJsonReturn new2m_select(BeanMachineInstall beanMachineInstall){
+        UUID uuid = UUID.randomUUID();
+        String suuid=uuid.toString().replace("-","");
+        beanMachineInstall.setId(suuid);
+        machineInstallMapper.new2m_select(beanMachineInstall);
+        BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
+        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setId(suuid);
+        System.out.println(beanMachineInstall.toString());
+        return beanJsonReturn;
+    }
+    @RequestMapping("/2version/m_install")
+    public BeanJsonReturn new2m_install(String machineno,String id,String remark){
+        machineInstallMapper.new2m_install(id,remark,machineno);
+        BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
+        beanJsonReturn.setErrcode("0");
+        return beanJsonReturn;
+    }
+    @RequestMapping("/2version/m_title")
+    public BeanJsonReturn new2m_title(Integer pagestep){
+        List titleListStep=null;
+
+        switch (pagestep){
+            case 0: titleListStep=machineInstallMapper.new2m_title1();break;
+            case 1: titleListStep=machineInstallMapper.new2m_title2();break;
+            default:break;
+        }
+        List<Map<String, Object>> stepCount = machineInstallMapper.getStepCount();
+        List<String> list = new ArrayList<>();
+        list.add("待安装");
+        list.add("已上线");
+        for (Map<String,Object> m:stepCount) {
+            Integer step = Integer.valueOf(m.get("title").toString());
+            switch (step){
+                case 4 :list.set(0,"待安装"+m.get("count"));break;
+                case 6 :list.set(1,"已上线"+m.get("count"));break;
+            }
+        }
+        Map paramMap=new HashMap();
+        paramMap.put("steplist",list);
+        paramMap.put("title",titleListStep);
+        BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
+        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setParamMap(paramMap);
+        return beanJsonReturn;
+    }
+    @RequestMapping("/2version/m_modify")
+    public BeanJsonReturn new2m_modify(BeanMachineInstall beanMachineInstall){
+
+
+
+        machineInstallMapper.new2m_modify(beanMachineInstall);
+        BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
+        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setId(beanMachineInstall.getId());
+
+        return beanJsonReturn;
+    }
+    @RequestMapping("/2version/detail")
+    public BeanJsonReturn get2versiondetail(String id){
+
+        Map<String,String> getorder = machineInstallMapper.get2versiondetail(id);
+        BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
+        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setParamMap(getorder);
+        return beanJsonReturn;
+    }
+
+
+
 
 
 }

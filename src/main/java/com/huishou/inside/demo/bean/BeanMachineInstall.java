@@ -16,4 +16,8 @@ public class BeanMachineInstall {
     private String token;
     private String remark;//备注
     private  String status;//状态
+    private  String latitude;
+    private  String longitude;
+    private  String installremark;
+    private String machine_no;
 }
