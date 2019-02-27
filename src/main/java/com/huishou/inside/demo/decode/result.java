@@ -1,23 +1,17 @@
 package com.huishou.inside.demo.decode;
 
 public class result {
-    String openid;
+    String openId;
     String session_key;
 
-    @Override
-    public String toString() {
-        return "result{" +
-                "openid='" + openid + '\'' +
-                ", session_key='" + session_key + '\'' +
-                '}';
-    }
+
 
     public String getOpenid() {
-        return openid;
+        return openId;
     }
 
     public void setOpenid(String openid) {
-        this.openid = openid;
+        this.openId = openid;
     }
 
     public String getSession_key() {

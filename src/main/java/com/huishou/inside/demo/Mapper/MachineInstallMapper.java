@@ -43,7 +43,7 @@ public interface MachineInstallMapper {
     void updateRepair(@Param("id")String id, @Param("terrace_progress")String terrace_progress);
     @Select("SELECT t.step AS title,count(1) as count FROM m_install_record  t GROUP BY t.step")
     List<Map<String,Object>> getStepCount();
-    @Insert("insert into m_install_record (id,step,city,villages,Community,area,site,select_date,status,select_remark,order_no,latitude,longitude) VALUES (#{id},4,#{city},#{villages},#{Community},#{area},#{site},now(),'正常',#{remark},(select concat('MI',year(now()),MONTH(now()),extract(day_second from now()))),#{latitude},#{longitude})")
+    @Insert("insert into m_install_record (id,step,city,villages,Community,area,site,select_date,status,select_remark,order_no,latitude,longitude,select_username) VALUES (#{id},4,#{city},#{villages},#{Community},#{area},#{site},now(),'正常',#{remark},(select concat('MI',year(now()),MONTH(now()),extract(day_second from now()))),#{latitude},#{longitude},#{name})")
     void new2m_select(BeanMachineInstall beanMachineInstall);
     @Update("UPDATE m_install_record t set t.step=6,t.installation_progress='完成',t.machine_no=#{machineno},t.installation_remark=#{remark},t.installation_date=NOW() where t.id=#{id}")
     void new2m_install( @Param("id")String id, @Param("remark")String remark,@Param("machineno")String machineno);

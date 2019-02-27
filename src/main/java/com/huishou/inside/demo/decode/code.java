@@ -14,7 +14,7 @@ public class code {
         ResponseEntity<String> forEntity = restTemplate.getForEntity(url, String.class);
         JSONObject jsonObject1 = JSONObject.fromObject(forEntity.getBody());
         result stu = (result) JSONObject.toBean(jsonObject1,result.class);
-        String openid=stu.openid;
+        String openid=stu.getOpenid();
         String session_key=stu.session_key;
         System.out.println("请求成功");
         System.out.println("openid="+openid);
@@ -30,7 +30,8 @@ public class code {
             e.printStackTrace();
         }
         if (decrypt==null){
-            return stu.toString();
+            JSONObject jsonObject = JSONObject.fromObject(stu);
+            return jsonObject.toString();
         }
 
         return decrypt;

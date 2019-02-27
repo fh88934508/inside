@@ -20,4 +20,5 @@ public class BeanMachineInstall {
     private  String longitude;
     private  String installremark;
     private String machine_no;
+    private String name;
 }

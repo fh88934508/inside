@@ -1,13 +1,12 @@
 package com.huishou.inside.demo.action;
 import com.huishou.inside.demo.Mapper.MachineInstallMapper;
+import com.huishou.inside.demo.Mapper.UserMapper;
 import com.huishou.inside.demo.bean.BeanJsonReturn;
 import com.huishou.inside.demo.bean.BeanMachineInstall;
+import com.huishou.inside.demo.bean.BeanUser;
 import com.huishou.inside.demo.service.TokenVerifyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
@@ -15,6 +14,8 @@ import java.util.*;
 @CrossOrigin
 @RestController
 public class MachineInstallAction {
+    @Autowired
+    UserMapper userMapper;
     @Autowired
     TokenVerifyService tokenVerifyService;
     @Autowired
@@ -199,26 +200,36 @@ public class MachineInstallAction {
     }
     @RequestMapping("/2version/m_modify")
     public BeanJsonReturn new2m_modify(BeanMachineInstall beanMachineInstall){
-
-
-
         machineInstallMapper.new2m_modify(beanMachineInstall);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
         beanJsonReturn.setErrcode("0");
         beanJsonReturn.setId(beanMachineInstall.getId());
-
         return beanJsonReturn;
     }
     @RequestMapping("/2version/detail")
     public BeanJsonReturn get2versiondetail(String id){
-
         Map<String,String> getorder = machineInstallMapper.get2versiondetail(id);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
         beanJsonReturn.setErrcode("0");
         beanJsonReturn.setParamMap(getorder);
         return beanJsonReturn;
     }
-
+    @PostMapping("/2version/user" )
+    public BeanJsonReturn add2versionName(@RequestBody BeanUser beanUser){
+        userMapper.insertNameOpenid(beanUser);
+        BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
+        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrmsg(beanUser.toString());
+        return beanJsonReturn;
+    }
+    @GetMapping("/2version/user" )
+    public BeanJsonReturn get2versionName(String openid){
+        Map<String, String> map = userMapper.getbyopenid(openid);
+        BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
+        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setParamMap(map);
+        return beanJsonReturn;
+    }
 
 
 
