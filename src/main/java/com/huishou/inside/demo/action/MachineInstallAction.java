@@ -215,8 +215,12 @@ public class MachineInstallAction {
         return beanJsonReturn;
     }
     @PostMapping("/2version/user" )
-    public BeanJsonReturn add2versionName(@RequestBody BeanUser beanUser){
-        userMapper.insertNameOpenid(beanUser);
+    public BeanJsonReturn add2versionName(BeanUser beanUser){
+        Map<String, String> getbyopenid = userMapper.getbyopenid(beanUser.getOpenid());
+        if (getbyopenid==null){
+            userMapper.insertNameOpenid(beanUser);
+        }
+
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
         beanJsonReturn.setErrcode("0");
         beanJsonReturn.setErrmsg(beanUser.toString());
