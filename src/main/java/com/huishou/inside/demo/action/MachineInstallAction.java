@@ -216,11 +216,15 @@ public class MachineInstallAction {
     }
     @PostMapping("/2version/user" )
     public BeanJsonReturn add2versionName(BeanUser beanUser){
-        Map<String, String> getbyopenid = userMapper.getbyopenid(beanUser.getOpenid());
-        if (getbyopenid==null){
-            userMapper.insertNameOpenid(beanUser);
-        }
-
+        userMapper.insertNameOpenid(beanUser);
+        BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
+        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrmsg(beanUser.toString());
+        return beanJsonReturn;
+    }
+    @PutMapping("/2version/user" )
+    public BeanJsonReturn modify2versionName(BeanUser beanUser){
+        userMapper.update(beanUser);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
         beanJsonReturn.setErrcode("0");
         beanJsonReturn.setErrmsg(beanUser.toString());

@@ -12,8 +12,9 @@ public interface UserMapper {
     public void insertNameOpenid(BeanUser beanUser);
    @Select("select * from user_info")
     public List<Map<String,String>> getAll();
-   @Update("UPDATE user_info t set t.openid=\"123123\" and t.name=\"7777\" where t.id=\"1\"")
+   @Update("UPDATE user_info t set t.name=#{name} where t.openid=#{openid}")
     public void update(BeanUser beanUser);
     @Select("select * from user_info where openid=#{openid}")
     Map<String, String> getbyopenid(String openid);
+
 }
