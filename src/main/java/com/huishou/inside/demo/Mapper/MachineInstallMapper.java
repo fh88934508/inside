@@ -47,9 +47,9 @@ public interface MachineInstallMapper {
     void new2m_select(BeanMachineInstall beanMachineInstall);
     @Update("UPDATE m_install_record t set t.step=6,t.installation_progress='完成',t.machine_no=#{machineno},t.installation_remark=#{remark},t.installation_date=NOW() where t.id=#{id}")
     void new2m_install( @Param("id")String id, @Param("remark")String remark,@Param("machineno")String machineno);
-    @Select("select concat(t.city,'-',t.villages,'-',t.area,'-',t.Community,'-',t.site)  as title,t.order_no as order_no  from m_install_record t where t.step=4")
+    @Select("SELECT CONCAT(t.site,'-',t.city,'-',t.Community,'-',t.area,'-',t.villages)  AS title,t.order_no AS order_no,t.machine_no AS note,select_date as time   FROM m_install_record t WHERE t.step=4 ORDER BY t.select_date DESC")
     List<Map<String,String>> new2m_title1();
-    @Select("select concat(t.city,'-',t.villages,'-',t.area,'-',t.Community,'-',t.site)  as title,t.order_no as order_no  from m_install_record t where t.step=6")
+    @Select("SELECT CONCAT(t.site,'-',t.city,'-',t.Community,'-',t.area,'-',t.villages)  AS title,t.order_no AS order_no,t.machine_no AS note,t.installation_date as time  FROM m_install_record t WHERE t.step=6 ORDER BY t.installation_date DESC")
     List<Map<String,String>> new2m_title2();
     @Update("update m_install_record t set t.machine_no=#{machine_no},t.city=#{city},t.villages=#{villages},t.area=#{area},t.Community=#{Community},t.site=#{site},t.latitude=#{latitude},t.longitude=#{longitude},t.select_remark=#{remark},t.installation_remark=#{installremark} where t.id=#{id}")
     void new2m_modify(BeanMachineInstall beanMachineInstall);
