@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.huishou.inside</groupId>
-    <artifactId>demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>dbs</artifactId>
+    <version>inside</version>
     <packaging>jar</packaging>
     <name>demo</name>
     <description>Demo project for Spring Boot</description>

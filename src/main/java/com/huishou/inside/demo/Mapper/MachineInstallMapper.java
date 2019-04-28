@@ -43,7 +43,7 @@ public interface MachineInstallMapper {
     void updateRepair(@Param("id")String id, @Param("terrace_progress")String terrace_progress);
     @Select("SELECT t.step AS title,count(1) as count FROM m_install_record  t GROUP BY t.step")
     List<Map<String,Object>> getStepCount();
-    @Insert("insert into m_install_record (id,step,city,villages,Community,area,site,select_date,status,select_remark,order_no,latitude,longitude,select_username) VALUES (#{id},4,#{city},#{villages},#{Community},#{area},#{site},now(),'正常',#{remark},(select concat('MI',year(now()),MONTH(now()),extract(day_second from now()))),#{latitude},#{longitude},#{name})")
+    @Insert("insert into m_install_record (id,step,city,villages,Community,area,site,select_date,status,select_remark,order_no,latitude,longitude,select_username,area4code) VALUES (#{id},4,#{city},#{villages},#{Community},#{area},#{site},now(),'正常',#{remark},(select concat('MI',year(now()),MONTH(now()),extract(day_second from now()))),#{latitude},#{longitude},#{name},#{area4code})")
     void new2m_select(BeanMachineInstall beanMachineInstall);
     @Update("UPDATE m_install_record t set t.step=6,t.installation_progress='完成',t.machine_no=#{machineno},t.installation_remark=#{remark},t.installation_date=NOW() where t.id=#{id}")
     void new2m_install( @Param("id")String id, @Param("remark")String remark,@Param("machineno")String machineno);
@@ -51,7 +51,7 @@ public interface MachineInstallMapper {
     List<Map<String,String>> new2m_title1();
     @Select("SELECT CONCAT(t.site,'-',t.Community,'-',t.area,'-',t.villages,'-',t.city)  AS title,t.order_no AS order_no,t.machine_no AS note,t.installation_date as time  FROM m_install_record t WHERE t.step=6 ORDER BY t.installation_date DESC")
     List<Map<String,String>> new2m_title2();
-    @Update("update m_install_record t set t.machine_no=#{machine_no},t.city=#{city},t.villages=#{villages},t.area=#{area},t.Community=#{Community},t.site=#{site},t.latitude=#{latitude},t.longitude=#{longitude},t.select_remark=#{remark},t.installation_remark=#{installremark} where t.id=#{id}")
+    @Update("update m_install_record t set t.machine_no=#{machine_no},t.city=#{city},t.villages=#{villages},t.area=#{area},t.Community=#{Community},t.site=#{site},t.latitude=#{latitude},t.longitude=#{longitude},t.select_remark=#{remark},t.installation_remark=#{installremark},t.area4code=#{area4code} where t.id=#{id}")
     void new2m_modify(BeanMachineInstall beanMachineInstall);
     @Select("select * from m_install_record t where t.id=#{id}")
     Map<String, String> get2versiondetail(String id);

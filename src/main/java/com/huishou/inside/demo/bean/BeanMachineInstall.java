@@ -21,4 +21,5 @@ public class BeanMachineInstall {
     private  String installremark;
     private String machine_no;
     private String name;
+    private String area4code;//四级编号
 }

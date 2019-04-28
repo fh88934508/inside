@@ -38,4 +38,5 @@ public class ScanAciton {
         String response = restTemplate.postForObject(url, httpEntity, String.class);
         return response.toString();
     }
+
 }
