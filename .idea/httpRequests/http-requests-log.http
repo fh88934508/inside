@@ -1,0 +1,388 @@
+GET http://127.0.0.1:8011/api/admin/fault/badrecode/9527?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T030246.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/badrecode/11?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T030134.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/badrecode/11?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T025339.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/badrecode/11?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T025309.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/badrecode/11?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T025218.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/badrecode/DBSAT0011?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T025051.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/badrecode/9527?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T025026.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/badrecode/9527?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T024950.404.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/bad?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T023454.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/bad?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T023249.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/bad?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/bad?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T023032.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/bad?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T022553.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/bad?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T022338.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/bad?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T022123.500.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/bad?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T021928.500.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/bad?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-06T021741.500.json
+
+###
+
+GET http://127.0.0.1:8011/2version/m_title?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T102611.200.json
+
+###
+
+GET http://127.0.0.1:8011/2version/m_title?pagestep=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T102602.200.json
+
+###
+
+GET http://127.0.0.1:8011/2version/m_title?pagestep=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T102557.200.json
+
+###
+
+GET http://127.0.0.1:8011/2version/m_title?pagestep=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T102548.200.json
+
+###
+
+GET http://127.0.0.1:8011/2version/m_title?pagestep=6
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T102533.200.json
+
+###
+
+GET http://127.0.0.1:8011/2version/m_title?pagestep=6
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T102423.200.json
+
+###
+
+GET http://127.0.0.1:8011/2version/m_title?pagestep=6
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:8011/2version/m_title?pagestep=6
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:8011/2version/m_title?step=4
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T102308.500.json
+
+###
+
+GET http://127.0.0.1:8011/123?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T102220.200.txt
+
+###
+
+GET http://127.0.0.1:8011/123?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:8011/123?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T101147.200.txt
+
+###
+
+GET http://127.0.0.1:8011/test?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T101125.404.json
+
+###
+
+GET http://127.0.0.1:8011/2version/m_title?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T101109.500.json
+
+###
+
+GET http://127.0.0.1:80/2version/m_title?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:80/2version/m_title?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T041048.500.json
+
+###
+
+GET http://127.0.0.1:80/2version/m_title?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-05T040719.500.json
+
+###
+
+GET http://127.0.0.1:8011/2version/m_title?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:8011/api/admin/map?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-24T113503.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/map?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-24T113150.200.txt
+
+###
+
+POST http://127.0.0.1:8011/api/admin/map?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-24T113143.405.json
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-23T093907.200.txt
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/927/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-23T093858.200.txt
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-23T093835.200.txt
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-23T093754.200.txt
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-23T093710.500.json
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/DBSA/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-23T093640.500.json
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-22T053541.200.txt
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-22T053525.200.txt
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-22T053340.200.txt
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-22T053258.200.txt
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-22T053000.200.txt
+
+###
+
+POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-22T052828.200.txt
+
+###
+

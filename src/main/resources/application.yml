@@ -5,9 +5,11 @@
 #数据源配置
 spring:
   datasource:
-    username: root
-    password: Mysqlhs
-    url: jdbc:mysql://localhost:3306/inside?serverTimezone=UTC&characterEncoding=UTF-8
+    username: dbs
+    password: Sjn_190111_8473
+    url: jdbc:mysql://rm-uf6m30img394sew9u.mysql.rds.aliyuncs.com:3306/dbs?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false
+    #url: jdbc:mysql://127.0.0.1:3306/dbs?serverTimezone=UTC&characterEncoding=UTF-8
+
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     filters: stat
@@ -26,7 +28,7 @@ spring:
 
 #tomcate端口号
 server:
-  port: 8012
+  port: 8011
 
 
 
