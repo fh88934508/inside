@@ -2,6 +2,28 @@ GET http://127.0.0.1:8011/api/admin/fault/badrecode/9527?pagestep=1
 Accept: */*
 Cache-Control: no-cache
 
+<> 2019-05-07T091925.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/badrecode/9527?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-07T091843.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/bad?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:8011/api/admin/fault/badrecode/9527?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
 <> 2019-05-06T030246.200.json
 
 ###
@@ -359,30 +381,6 @@ Accept: */*
 Cache-Control: no-cache
 
 <> 2019-04-22T053340.200.txt
-
-###
-
-POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-04-22T053258.200.txt
-
-###
-
-POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-04-22T053000.200.txt
-
-###
-
-POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-04-22T052828.200.txt
 
 ###
 
