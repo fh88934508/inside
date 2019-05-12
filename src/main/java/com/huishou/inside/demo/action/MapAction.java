@@ -18,7 +18,7 @@ public class MapAction {
         List<BeanMachineInstall> mapAll = mapMapper.getMapAll();
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
         beanJsonReturn.setErrmsg("OK");
-        beanJsonReturn.setErrcode("200");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setParamList(mapAll);
         return beanJsonReturn;
     }

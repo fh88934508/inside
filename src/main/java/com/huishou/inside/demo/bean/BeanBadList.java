@@ -21,4 +21,6 @@ public class BeanBadList {
     String upd_time;
     String is_photoreceptor_bad;
     String is_bad;
+    String iscamerabad;
+    String isplcbad;
 }
