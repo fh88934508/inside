@@ -8,6 +8,6 @@ import java.util.List;
 
 @Mapper
 public interface MapMapper {
-    @Select("select * from m_install_record")
+    @Select("select * from m_install_record t where t.is_cancellation=1")
     public List<BeanMachineInstall> getMapAll();
 }
