@@ -22,4 +22,11 @@ public class BeanMachineInstall {
     private String machine_no;
     private String name;
     private String area4code;//四级编号
+    private String version;//版本号
+    private String isplcbad;//plc故障
+    private String iscamerabad;//摄像头故障
+    private String greeting;//是否在线
+    private String greeting_time;//上线或离线时间
+    private String is_bad;//仓门故障
+    private String is_photoreceptor_bad;//光感故障
 }
