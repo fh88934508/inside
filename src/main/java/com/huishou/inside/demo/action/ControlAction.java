@@ -3,6 +3,7 @@ package com.huishou.inside.demo.action;
 import com.huishou.inside.demo.Mapper.ControlMapper;
 import com.huishou.inside.demo.bean.BeanJsonReturn;
 import com.huishou.inside.demo.bean.BeanMachineInstall;
+import com.huishou.inside.demo.bean.m_version;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -50,5 +51,19 @@ public class ControlAction {
         HttpEntity httpEntity = new HttpEntity(jsonObject.toString(), header);
         String response = restTemplate.postForObject(url, httpEntity, String.class);
         return response.toString();
+    }
+    @GetMapping("/api/admin/version")
+    public BeanJsonReturn gerVersion(){
+        BeanJsonReturn beanJsonReturn = new BeanJsonReturn();
+        m_version version = controlMapper.getVersion();
+        if(version==null){
+            beanJsonReturn.setErrcode("0");
+            beanJsonReturn.setErrmsg("获取版本号失败");
+        }else {
+            beanJsonReturn.setErrcode("1");
+            beanJsonReturn.setErrmsg("获取版本号成功");
+            beanJsonReturn.setData(version);
+        }
+        return beanJsonReturn;
     }
 }

@@ -1,3 +1,69 @@
+GET http://127.0.0.1:8011/api/admin/version?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-16T050226.404.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/login?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-15T124850.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/login?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-14T110110.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/login?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-14T110031.500.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/gateenable?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-14T110023.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/gateenable?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-14T100733.200.json
+
+###
+
+GET http://127.0.0.1:8011/api/admin/gateenable?pagestep=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-05-14T100549.200.json
+
+###
+
 GET http://127.0.0.1:8011/api/admin/fault/badrecode/9527?pagestep=1
 Accept: */*
 Cache-Control: no-cache
@@ -325,62 +391,6 @@ Accept: */*
 Cache-Control: no-cache
 
 <> 2019-04-23T093858.200.txt
-
-###
-
-POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-04-23T093835.200.txt
-
-###
-
-POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-04-23T093754.200.txt
-
-###
-
-POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-04-23T093710.500.json
-
-###
-
-POST http://127.0.0.1:8011/api/admin/minip/DBSA/ProviderUserlogin?openid=123&name=tttt11122
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-04-23T093640.500.json
-
-###
-
-POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-04-22T053541.200.txt
-
-###
-
-POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-04-22T053525.200.txt
-
-###
-
-POST http://127.0.0.1:8011/api/admin/minip/9527/ProviderUserlogin?openid=123&name=tttt11122
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-04-22T053340.200.txt
 
 ###
 

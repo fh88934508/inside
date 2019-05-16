@@ -41,7 +41,7 @@ public interface MachineInstallMapper {
     void updateterrace(@Param("id")String id, @Param("terracestep")String terracestep,@Param("remark") String remark, @Param("step")String step);
     @Update("UPDATE m_install_record t set t.step=3,t.terrace_progress=#{terrace_progress},t.terrace_date=NOW() where t.id=#{id}")
     void updateRepair(@Param("id")String id, @Param("terrace_progress")String terrace_progress);
-    @Select("SELECT t.step AS title,count(1) as count FROM m_install_record  t where  t.is_cancellation=1 GROUP BY t.step")
+    @Select("SELECT t.step AS title,count(1) as count FROM m_install_record  t where  t.is_cancellation=1 and (t.step='4'or t.step='6') GROUP BY t.step")
     List<Map<String,Object>> getStepCount();
     @Insert("insert into m_install_record (id,step,city,villages,Community,area,site,select_date,status,select_remark,order_no,latitude,longitude,select_username,area4code) VALUES (#{id},4,#{city},#{villages},#{Community},#{area},#{site},now(),'正常',#{remark},(select concat('MI',year(now()),MONTH(now()),extract(day_second from now()))),#{latitude},#{longitude},#{name},#{area4code})")
     void new2m_select(BeanMachineInstall beanMachineInstall);
