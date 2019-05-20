@@ -170,8 +170,8 @@ public class MachineInstallAction {
         beanJsonReturn.setErrcode("0");
         return beanJsonReturn;
     }
-    @RequestMapping("/2version/m_title")
-    public BeanJsonReturn new2m_title(Integer pagestep){
+    @RequestMapping("/2version/m_title/{pagestep}")
+    public BeanJsonReturn new2m_title(@PathVariable Integer pagestep){
         List titleListStep=null;
 
         switch (pagestep){

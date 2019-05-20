@@ -1,6 +1,7 @@
 package com.huishou.inside.demo.Mapper;
-import com.huishou.inside.demo.bean.BeanMachineInstall;
+
 import com.huishou.inside.demo.bean.BeanUser;
+import com.huishou.inside.demo.entity.User;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -16,20 +17,12 @@ public interface UserMapper {
     public void update(BeanUser beanUser);
     @Select("select * from user_info where openid=#{openid}")
     Map<String, String> getbyopenid(String openid);
-    @Select("SELECT\n" +
-            "t.id,\n" +
-            "t.userid,\n" +
-            "t.username,\n" +
-            "t.`password`,\n" +
-            "t.phone,\n" +
-            "t.openid,\n" +
-            "t.`name`,\n" +
-            "t1.role,\n" +
-            "t1.user_id\n" +
-            "FROM\n" +
-            "user_info AS t\n" +
-            "LEFT JOIN user_group AS t1 ON t1.user_id = t.id\n" +
-            "WHERE\n" +
-            "t.username = #{username}")
+    @Select("select * from user_info where username=#{Username}")
     BeanUser getUser(String username);
+    @Insert("INSERT into user_info (id,username,password,role,name) values (UUID(),#{username},#{password},#{role},#{name})")
+    public void save(User user);
+    @Select("select * from user_info where username=#{Username}")
+    public User findByUsername(String Username);
+    @Update("update user_info set password=#{password} where  username=#{username}")
+    void updatePassword(User user);
 }
