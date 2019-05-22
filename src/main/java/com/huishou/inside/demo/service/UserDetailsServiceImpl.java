@@ -1,7 +1,7 @@
 package com.huishou.inside.demo.service;
 
 
-import com.huishou.inside.demo.Mapper.UserMapper;
+import com.huishou.inside.demo.mapper.UserMapper;
 import com.huishou.inside.demo.entity.User;
 import com.security.demo.entity.JwtUser;
 

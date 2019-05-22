@@ -1,6 +1,6 @@
 package com.huishou.inside.demo.controller;
-import com.huishou.inside.demo.Mapper.UserMapper;
-import com.huishou.inside.demo.bean.BeanJsonReturn;
+import com.huishou.inside.demo.mapper.UserMapper;
+import com.huishou.inside.demo.entity.BeanJsonReturn;
 import com.huishou.inside.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

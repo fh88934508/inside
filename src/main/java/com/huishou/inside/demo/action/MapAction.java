@@ -1,9 +1,8 @@
 package com.huishou.inside.demo.action;
 
-import com.huishou.inside.demo.Mapper.MapMapper;
-import com.huishou.inside.demo.bean.BeanJsonReturn;
-import com.huishou.inside.demo.bean.BeanMachineInstall;
-import com.huishou.inside.demo.entity.User;
+import com.huishou.inside.demo.mapper.MapMapper;
+import com.huishou.inside.demo.entity.BeanJsonReturn;
+import com.huishou.inside.demo.entity.BeanMachineInstall;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;

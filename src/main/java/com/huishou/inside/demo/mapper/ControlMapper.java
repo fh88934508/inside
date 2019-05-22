@@ -1,7 +1,7 @@
-package com.huishou.inside.demo.Mapper;
+package com.huishou.inside.demo.mapper;
 
-import com.huishou.inside.demo.bean.BeanMachineInstall;
-import com.huishou.inside.demo.bean.m_version;
+import com.huishou.inside.demo.entity.BeanMachineInstall;
+import com.huishou.inside.demo.entity.m_version;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

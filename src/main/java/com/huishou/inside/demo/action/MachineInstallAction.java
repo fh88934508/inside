@@ -1,10 +1,9 @@
 package com.huishou.inside.demo.action;
-import com.huishou.inside.demo.Mapper.MachineInstallMapper;
-import com.huishou.inside.demo.Mapper.UserMapper;
-import com.huishou.inside.demo.bean.BeanJsonReturn;
-import com.huishou.inside.demo.bean.BeanMachineInstall;
-import com.huishou.inside.demo.bean.BeanUser;
-import com.huishou.inside.demo.service.TokenVerifyService;
+import com.huishou.inside.demo.mapper.MachineInstallMapper;
+import com.huishou.inside.demo.mapper.UserMapper;
+import com.huishou.inside.demo.entity.BeanJsonReturn;
+import com.huishou.inside.demo.entity.BeanMachineInstall;
+import com.huishou.inside.demo.entity.BeanUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +16,7 @@ import java.util.*;
 public class MachineInstallAction {
     @Autowired
     UserMapper userMapper;
-    @Autowired
-    TokenVerifyService tokenVerifyService;
+
     @Autowired
     MachineInstallMapper machineInstallMapper;
     @RequestMapping("/machine")

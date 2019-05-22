@@ -1,14 +1,12 @@
 package com.huishou.inside.demo.action;
 
-import com.huishou.inside.demo.Mapper.UserMapper;
-import com.huishou.inside.demo.bean.BeanJsonReturn;
-import com.huishou.inside.demo.bean.BeanUser;
+import com.huishou.inside.demo.mapper.UserMapper;
+import com.huishou.inside.demo.entity.BeanJsonReturn;
+import com.huishou.inside.demo.entity.BeanUser;
 import com.huishou.inside.demo.utils.JwtTokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

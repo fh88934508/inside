@@ -1,9 +1,9 @@
 package com.huishou.inside.demo.action;
 
-import com.huishou.inside.demo.Mapper.FaultMapper;
-import com.huishou.inside.demo.bean.BeanBadList;
-import com.huishou.inside.demo.bean.BeanBadRecode;
-import com.huishou.inside.demo.bean.BeanJsonReturn;
+import com.huishou.inside.demo.mapper.FaultMapper;
+import com.huishou.inside.demo.entity.BeanBadList;
+import com.huishou.inside.demo.entity.BeanBadRecode;
+import com.huishou.inside.demo.entity.BeanJsonReturn;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;

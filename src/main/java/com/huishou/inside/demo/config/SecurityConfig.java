@@ -1,7 +1,7 @@
 package com.huishou.inside.demo.config;
 
 
-import com.huishou.inside.demo.JWTAuthenticationEntryPoint;
+import com.huishou.inside.demo.entity.JWTAuthenticationEntryPoint;
 import com.huishou.inside.demo.filter.JWTAuthenticationFilter;
 
 import com.huishou.inside.demo.filter.JWTAuthorizationFilter;

@@ -1,7 +1,7 @@
-package com.huishou.inside.demo.Mapper;
+package com.huishou.inside.demo.mapper;
 
-import com.huishou.inside.demo.bean.BeanBadList;
-import com.huishou.inside.demo.bean.BeanBadRecode;
+import com.huishou.inside.demo.entity.BeanBadList;
+import com.huishou.inside.demo.entity.BeanBadRecode;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

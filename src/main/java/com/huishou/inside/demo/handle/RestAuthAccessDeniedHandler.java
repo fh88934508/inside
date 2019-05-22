@@ -1,7 +1,7 @@
 package com.huishou.inside.demo.handle;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.huishou.inside.demo.bean.BeanJsonReturn;
+import com.huishou.inside.demo.entity.BeanJsonReturn;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
@@ -12,8 +12,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * 处理没有权限的类

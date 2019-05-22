@@ -3,8 +3,8 @@ package com.huishou.inside.demo.filter;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.huishou.inside.demo.Mapper.UserMapper;
-import com.huishou.inside.demo.bean.BeanJsonReturn;
+import com.huishou.inside.demo.mapper.UserMapper;
+import com.huishou.inside.demo.entity.BeanJsonReturn;
 import com.huishou.inside.demo.entity.User;
 import com.huishou.inside.demo.utils.JwtTokenUtils;
 import com.security.demo.entity.JwtUser;
@@ -23,8 +23,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 
 
 /**

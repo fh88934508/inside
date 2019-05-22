@@ -1,7 +1,5 @@
-package com.huishou.inside.demo;
+package com.huishou.inside.demo.entity;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.huishou.inside.demo.bean.BeanJsonReturn;
 import net.sf.json.JSONObject;
 
 import org.springframework.security.core.AuthenticationException;

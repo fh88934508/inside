@@ -1,9 +1,9 @@
 package com.huishou.inside.demo.action;
 
-import com.huishou.inside.demo.Mapper.ControlMapper;
-import com.huishou.inside.demo.bean.BeanJsonReturn;
-import com.huishou.inside.demo.bean.BeanMachineInstall;
-import com.huishou.inside.demo.bean.m_version;
+import com.huishou.inside.demo.mapper.ControlMapper;
+import com.huishou.inside.demo.entity.BeanJsonReturn;
+import com.huishou.inside.demo.entity.BeanMachineInstall;
+import com.huishou.inside.demo.entity.m_version;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;

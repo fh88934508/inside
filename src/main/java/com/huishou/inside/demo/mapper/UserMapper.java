@@ -1,6 +1,6 @@
-package com.huishou.inside.demo.Mapper;
+package com.huishou.inside.demo.mapper;
 
-import com.huishou.inside.demo.bean.BeanUser;
+import com.huishou.inside.demo.entity.BeanUser;
 import com.huishou.inside.demo.entity.User;
 import org.apache.ibatis.annotations.*;
 

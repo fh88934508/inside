@@ -1,7 +1,7 @@
-package com.huishou.inside.demo.Mapper;
+package com.huishou.inside.demo.mapper;
 
 
-import com.huishou.inside.demo.bean.host_door_enable;
+import com.huishou.inside.demo.entity.host_door_enable;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

@@ -1,4 +1,4 @@
-package com.huishou.inside.demo.bean;
+package com.huishou.inside.demo.entity;
 
 
 import lombok.Data;
