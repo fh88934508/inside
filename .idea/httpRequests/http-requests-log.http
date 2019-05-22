@@ -1,3 +1,83 @@
+POST http://127.0.0.1:8011/auth/register?password=123&username=zhangmin&role=ROLE_SUPPERADMIN&name=张敏
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-21T113017.200.json
+
+###
+
+POST http://127.0.0.1:8011/auth/register?password=123&username=zhangmin&role=ROLE_SUPPERADMIN&name=张敏
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-21T113007.200.json
+
+###
+
+GET http://127.0.0.1:8011/auth/register?password=123&username=zhangmin&role=ROLE_SUPPERADMIN&name=张敏
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-21T113002.405.json
+
+###
+
+GET http://127.0.0.1:8011/auth/register?password=123&username=zhangmin&role=ROLE_SUPPERADMIN&name=张敏
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-21T112918.403.json
+
+###
+
+GET http://127.0.0.1:8011/auth/register?password=123&username=zhangmin&role=ROLE_SUPPERADMIN&name=张敏
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-21T112909.403.json
+
+###
+
+GET http://127.0.0.1:8011/auth/login?password=123&username=zhangmin&role=ROLE_SUPPERADMIN&name=张敏
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-21T112845.500.json
+
+###
+
+GET http://127.0.0.1:8011/、auth?password=123&username=zhangmin&role=ROLE_SUPPERADMIN&name=张敏
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-21T112834.403.json
+
+###
+
+GET http://127.0.0.1:8011/test?password=123&username=zhangmin&role=ROLE_SUPPERADMIN&name=张敏
+Accept: */*
+Cache-Control: no-cache
+username: zhangmin
+password: 123
+
+<> 2019-05-21T112827.403.json
+
+###
+
 GET http://127.0.0.1:8011/test?password=123&username=zhangmin
 Accept: */*
 Cache-Control: no-cache
@@ -445,88 +525,6 @@ password: 123
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFuZ21pbiIsImlzcyI6ImVjaGlzYW4iLCJleHAiOjE1NTg4NzQwMDEsImlhdCI6MTU1ODI2OTIwMSwicm9sIjoiUk9MRV9VU0VSIn0.jVQSnf4R-VA7TK2BXEYxe1Gx9Uia5C7qTm1W1KBkAYMvN40rriYvfg02Xdx_gHPeq-8VLs73OEua2P7f9odnlA
 
 <> 2019-05-19T094612.200.json
-
-###
-
-GET http://127.0.0.1:8011/test?pagestep=1&username=zhangmin&password=123
-Accept: */*
-Cache-Control: no-cache
-username: zhangmin
-password: 123
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFuZ21pbiIsImlzcyI6ImVjaGlzYW4iLCJleHAiOjE1NTg4NzQwMDEsImlhdCI6MTU1ODI2OTIwMSwicm9sIjoiUk9MRV9VU0VSIn0.jVQSnf4R-VA7TK2BXEYxe1Gx9Uia5C7qTm1W1KBkAYMvN40rriYvfg02Xdx_gHPeq-8VLs73OEua2P7f9odnlA
-
-<> 2019-05-19T094034.403.json
-
-###
-
-GET http://127.0.0.1:8011/test?pagestep=1&username=zhangmin&password=123
-Accept: */*
-Cache-Control: no-cache
-username: zhangmin
-password: 123
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFuZ21pbiIsImlzcyI6ImVjaGlzYW4iLCJleHAiOjE1NTg4NzQwMDEsImlhdCI6MTU1ODI2OTIwMSwicm9sIjoiUk9MRV9VU0VSIn0.jVQSnf4R-VA7TK2BXEYxe1Gx9Uia5C7qTm1W1KBkAYMvN40rriYvfg02Xdx_gHPeq-8VLs73OEua2P7f9odnlA
-
-<> 2019-05-19T093945.200.txt
-
-###
-
-GET http://127.0.0.1:8011/test?pagestep=1&username=zhangmin&password=123
-Accept: */*
-Cache-Control: no-cache
-username: zhangmin
-password: 123
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFuZ21pbiIsImlzcyI6ImVjaGlzYW4iLCJleHAiOjE1NTg4NzQwMDEsImlhdCI6MTU1ODI2OTIwMSwicm9sIjoiUk9MRV9VU0VSIn0.jVQSnf4R-VA7TK2BXEYxe1Gx9Uia5C7qTm1W1KBkAYMvN40rriYvfg02Xdx_gHPeq-8VLs73OEua2P7f9odnlA
-
-<> 2019-05-19T084657.200.txt
-
-###
-
-GET http://127.0.0.1:8011/test?pagestep=1&username=zhangmin&password=123
-Accept: */*
-Cache-Control: no-cache
-username: zhangmin
-password: 123
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFuZ21pbiIsImlzcyI6ImVjaGlzYW4iLCJleHAiOjE1NTg4NzQwMDEsImlhdCI6MTU1ODI2OTIwMSwicm9sIjoiUk9MRV9VU0VSIn0.jVQSnf4R-VA7TK2BXEYxe1Gx9Uia5C7qTm1W1KBkAYMvN40rriYvfg02Xdx_gHPeq-8VLs73OEua2P7f9odnlA
-
-<> 2019-05-19T084655.200.txt
-
-###
-
-GET http://127.0.0.1:8011/test?pagestep=1&username=zhangmin&password=123
-Accept: */*
-Cache-Control: no-cache
-username: zhangmin
-password: 123
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFuZ21pbiIsImlzcyI6ImVjaGlzYW4iLCJleHAiOjE1NTg4NzQwMDEsImlhdCI6MTU1ODI2OTIwMSwicm9sIjoiUk9MRV9VU0VSIn0.jVQSnf4R-VA7TK2BXEYxe1Gx9Uia5C7qTm1W1KBkAYMvN40rriYvfg02Xdx_gHPeq-8VLs73OEua2P7f9odnlA
-
-<> 2019-05-19T084650.200.txt
-
-###
-
-GET http://127.0.0.1:8011/test?pagestep=1&username=zhangmin&password=123
-Accept: */*
-Cache-Control: no-cache
-username: zhangmin
-password: 123
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFuZ21pbiIsImlzcyI6ImVjaGlzYW4iLCJleHAiOjE1NTg4NzQwMDEsImlhdCI6MTU1ODI2OTIwMSwicm9sIjoiUk9MRV9VU0VSIn0.jVQSnf4R-VA7TK2BXEYxe1Gx9Uia5C7qTm1W1KBkAYMvN40rriYvfg02Xdx_gHPeq-8VLs73OEua2P7f9odnlA
-
-###
-
-GET http://127.0.0.1:8011/test?pagestep=1&username=zhangmin&password=123
-Accept: */*
-Cache-Control: no-cache
-username: zhangmin
-password: 123
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFuZ21pbiIsImlzcyI6ImVjaGlzYW4iLCJleHAiOjE1NTg4NzQwMDEsImlhdCI6MTU1ODI2OTIwMSwicm9sIjoiUk9MRV9VU0VSIn0.jVQSnf4R-VA7TK2BXEYxe1Gx9Uia5C7qTm1W1KBkAYMvN40rriYvfg02Xdx_gHPeq-8VLs73OEua2P7f9odnlA
-
-###
-
-GET http://127.0.0.1:8011/test?pagestep=1&username=zhangmin&password=123
-Accept: */*
-Cache-Control: no-cache
-username: zhangmin
-password: 123
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFuZ21pbiIsImlzcyI6ImVjaGlzYW4iLCJleHAiOjE1NTg4NzQwMDEsImlhdCI6MTU1ODI2OTIwMSwicm9sIjoiUk9MRV9VU0VSIn0.jVQSnf4R-VA7TK2BXEYxe1Gx9Uia5C7qTm1W1KBkAYMvN40rriYvfg02Xdx_gHPeq-8VLs73OEua2P7f9odnlA
 
 ###
 

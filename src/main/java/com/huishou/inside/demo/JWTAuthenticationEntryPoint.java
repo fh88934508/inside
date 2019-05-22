@@ -29,7 +29,7 @@ public class JWTAuthenticationEntryPoint implements AuthenticationEntryPoint {
         beanJsonReturn.setErrmsg("请重新登陆");
         beanJsonReturn.setData(authException.getMessage());
         JSONObject json = JSONObject.fromObject(beanJsonReturn);
-        String reason = json.toString();
-        response.getWriter().write(new ObjectMapper().writeValueAsString(reason));
+
+        response.getWriter().write(json.toString());
     }
 }

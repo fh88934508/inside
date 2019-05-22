@@ -20,7 +20,6 @@ public class ControlAction {
     ControlMapper controlMapper;
     @GetMapping("/api/admin/host/register/{id}")
     public String RegisterHost(@PathVariable String id){
-        System.out.println("id="+id);
         RestTemplate restTemplate=new RestTemplate();
         String url="http://zszypro.bmadmin.com/manager/bmadmin/trisubstitutedMachine/insertTrisubstituteMachine";
         final BeanMachineInstall registerHostinfo = controlMapper.getRegisterHostinfo(id);

@@ -8,7 +8,11 @@ import lombok.Data;
  */
 @Data
 public class User {
-
+    public static final String ROLE_OPERATION="ROLE_OPERATION";
+    public static final String ROLE_REPAIR="ROLE_REPAIR";
+    public static final String ROLE_INSTALL="ROLE_INSTALL";
+    public static final String ROLE_ADMIN="ROLE_ADMIN";
+    public static final String ROLE_SUPPERADMIN="ROLE_SUPPERADMIN";
 
     private String id;
 

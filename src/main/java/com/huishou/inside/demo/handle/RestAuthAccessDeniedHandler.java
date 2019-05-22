@@ -36,6 +36,7 @@ public class RestAuthAccessDeniedHandler implements AccessDeniedHandler {
         beanJsonReturn.setErrmsg("您没有权限访问该资源");
         beanJsonReturn.setData(e.getMessage());
         JSONObject json = JSONObject.fromObject(beanJsonReturn);
-        response.getWriter().write(new ObjectMapper().writeValueAsString(json.toString()));
+
+        response.getWriter().write(json.toString());
     }
 }

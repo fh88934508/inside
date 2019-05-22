@@ -1,5 +1,6 @@
 package com.huishou.inside.demo.action;
 
+import com.huishou.inside.demo.entity.User;
 import net.sf.json.JSONObject;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -16,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 public class ScanAciton {
 
     @PostMapping("/api/admin/minip/{id}/ProviderUserlogin")
-    public String  ProviderUserlogin(@PathVariable String id){
+    public String  ProviderUserlogin(@PathVariable String id, User user){
 
         RestTemplate restTemplate=new RestTemplate();
         String url="http://dbsprod-console.dabashounb.com/api/admin/app/"+id+"/ProviderUserlogin";
@@ -25,6 +26,7 @@ public class ScanAciton {
         jsonObject.put("username","13800000000");
         jsonObject.put("realname","minip");
         jsonObject.put("type","repair");
+        System.out.println("扫码开箱"+jsonObject.toString());
         HttpHeaders header = new HttpHeaders();
         header.setContentType(MediaType.APPLICATION_JSON_UTF8);
         HttpEntity httpEntity = new HttpEntity(jsonObject.toString(), header);

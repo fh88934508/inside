@@ -102,12 +102,15 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException, ServletException {
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("application/json; charset=utf-8");
+        response.setStatus(HttpServletResponse.SC_OK);
         BeanJsonReturn beanJsonReturn = new BeanJsonReturn();
         beanJsonReturn.setErrcode("0");
         beanJsonReturn.setErrmsg("登录失败");
         beanJsonReturn.setData("authentication failed, reason: " + failed.getMessage());
         JSONObject json = JSONObject.fromObject(beanJsonReturn);
-        response.getWriter().write(new ObjectMapper().writeValueAsString(json.toString()));
+        response.getWriter().write(json.toString());
 
     }
 }

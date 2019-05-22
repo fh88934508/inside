@@ -5,6 +5,7 @@ import com.huishou.inside.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -43,12 +44,26 @@ public class AuthController {
         return beanJsonReturn;
     }
     @PostMapping("/setpassword")
-    public BeanJsonReturn modifyPassword(User user){
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        userMapper.updatePassword(user);
+    public BeanJsonReturn modifyPassword(@RequestBody User user){
         BeanJsonReturn beanJsonReturn = new BeanJsonReturn();
-        beanJsonReturn.setErrcode("1");
-        beanJsonReturn.setErrmsg("注册成功");
+        if(user.getPassword()==null){
+            beanJsonReturn.setErrcode("0");
+            beanJsonReturn.setErrmsg("密码不能为空");
+        }else{
+            if(user==null){
+                beanJsonReturn.setErrcode("0");
+                beanJsonReturn.setErrmsg("用户名不能为空");
+            }else{
+                user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+                userMapper.updatePassword(user);
+                beanJsonReturn.setErrcode("1");
+                beanJsonReturn.setErrmsg("修改成功");
+            }
+        }
+
+
+
+
         return beanJsonReturn;
     }
 }

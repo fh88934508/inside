@@ -6,6 +6,7 @@ import com.huishou.inside.demo.bean.BeanMachineInstall;
 import com.huishou.inside.demo.bean.BeanUser;
 import com.huishou.inside.demo.service.TokenVerifyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -30,7 +31,7 @@ public class MachineInstallAction {
         beanMachineInstall.setId(suuid);
         machineInstallMapper.addSelect(beanMachineInstall);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setErrmsg("选点成功");
         beanJsonReturn.setId(suuid);
         return beanJsonReturn;
@@ -66,7 +67,7 @@ public class MachineInstallAction {
         paramMap.put("steplist",list);
         paramMap.put("title",titleListStep);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setParamMap(paramMap);
         return beanJsonReturn;
     }
@@ -74,7 +75,7 @@ public class MachineInstallAction {
     public BeanJsonReturn Selectverify(String id){
         Map<String,String> selectVerify = machineInstallMapper.getSelectVerify(id);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setParamMap(selectVerify);
         return beanJsonReturn;
     }
@@ -83,7 +84,7 @@ public class MachineInstallAction {
 
         machineInstallMapper.updateSelectVerify(id,remark,step,latitude,longitude,terrace_progress);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setId(id);
         return beanJsonReturn;
     }
@@ -91,7 +92,7 @@ public class MachineInstallAction {
     public BeanJsonReturn cancellation(String id,String remark){
         machineInstallMapper.cancellation(id,remark);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setId(id);
         return beanJsonReturn;
     }
@@ -99,7 +100,7 @@ public class MachineInstallAction {
     public BeanJsonReturn terrace(String id){
         Map<String, String> getterrace = machineInstallMapper.getterrace(id);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setParamMap(getterrace);
         return beanJsonReturn;
     }
@@ -107,7 +108,7 @@ public class MachineInstallAction {
     public BeanJsonReturn updateterrace(String id,String terracestep,String remark,String step){
          machineInstallMapper.updateterrace(id,terracestep,remark,step);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
 
         return beanJsonReturn;
     }
@@ -116,7 +117,7 @@ public class MachineInstallAction {
     public BeanJsonReturn getorder(String orderno){
         Map<String,String> getorder = machineInstallMapper.getorder(orderno);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setParamMap(getorder);
         return beanJsonReturn;
     }
@@ -124,7 +125,7 @@ public class MachineInstallAction {
     public BeanJsonReturn getdtail(String orderno){
         Map<String,String> getorder = machineInstallMapper.getdtail(orderno);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setParamMap(getorder);
         return beanJsonReturn;
     }
@@ -132,14 +133,14 @@ public class MachineInstallAction {
     public BeanJsonReturn updatedebug(String id,String remark){
          machineInstallMapper.updatedebug(id,remark);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         return beanJsonReturn;
     }
     @RequestMapping("/machine/install")
     public BeanJsonReturn updateinstall(String id,String remark,String machineno){
         machineInstallMapper.updateinstall(id,remark,machineno);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         return beanJsonReturn;
     }
     @RequestMapping("/machine/updaterepair")
@@ -147,7 +148,7 @@ public class MachineInstallAction {
         String terrace_progress="地坪修复中";
         machineInstallMapper.updateRepair(id,terrace_progress);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         return beanJsonReturn;
     }
 
@@ -158,7 +159,7 @@ public class MachineInstallAction {
         beanMachineInstall.setId(suuid);
         machineInstallMapper.new2m_select(beanMachineInstall);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setId(suuid);
         System.out.println(beanMachineInstall.toString());
         return beanJsonReturn;
@@ -167,7 +168,7 @@ public class MachineInstallAction {
     public BeanJsonReturn new2m_install(String machineno,String id,String remark){
         machineInstallMapper.new2m_install(id,remark,machineno);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         return beanJsonReturn;
     }
     @RequestMapping("/2version/m_title/{pagestep}")
@@ -194,15 +195,16 @@ public class MachineInstallAction {
         paramMap.put("steplist",list);
         paramMap.put("title",titleListStep);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setParamMap(paramMap);
         return beanJsonReturn;
     }
     @RequestMapping("/2version/m_modify")
+    @PreAuthorize("hasAnyRole('ROLE_INSTALL','ROLE_ADMIN','ROLE_SUPPERADMIN','ROLE_OPERATION')")
     public BeanJsonReturn new2m_modify(BeanMachineInstall beanMachineInstall){
         machineInstallMapper.new2m_modify(beanMachineInstall);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setId(beanMachineInstall.getId());
         return beanJsonReturn;
     }
@@ -210,7 +212,7 @@ public class MachineInstallAction {
     public BeanJsonReturn get2versiondetail(String id){
         Map<String,String> getorder = machineInstallMapper.get2versiondetail(id);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setParamMap(getorder);
         return beanJsonReturn;
     }
@@ -218,7 +220,7 @@ public class MachineInstallAction {
     public BeanJsonReturn add2versionName(BeanUser beanUser){
         userMapper.insertNameOpenid(beanUser);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setErrmsg(beanUser.toString());
         return beanJsonReturn;
     }
@@ -226,7 +228,7 @@ public class MachineInstallAction {
     public BeanJsonReturn modify2versionName(BeanUser beanUser){
         userMapper.update(beanUser);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setErrmsg(beanUser.toString());
         return beanJsonReturn;
     }
@@ -234,7 +236,7 @@ public class MachineInstallAction {
     public BeanJsonReturn get2versionName(String openid){
         Map<String, String> map = userMapper.getbyopenid(openid);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
-        beanJsonReturn.setErrcode("0");
+        beanJsonReturn.setErrcode("1");
         beanJsonReturn.setParamMap(map);
         return beanJsonReturn;
     }
