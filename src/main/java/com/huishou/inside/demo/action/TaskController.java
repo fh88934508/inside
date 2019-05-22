@@ -1,4 +1,4 @@
-package com.huishou.inside.demo.controller;
+package com.huishou.inside.demo.action;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.huishou.inside.demo.controller;
+package com.huishou.inside.demo.action;
 import com.huishou.inside.demo.mapper.UserMapper;
 import com.huishou.inside.demo.entity.BeanJsonReturn;
 import com.huishou.inside.demo.entity.User;

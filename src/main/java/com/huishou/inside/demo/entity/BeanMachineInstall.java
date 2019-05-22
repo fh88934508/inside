@@ -7,6 +7,8 @@ import lombok.Data;
 public class BeanMachineInstall {
 
     private  String id;
+    private String install_username;//安装人员
+    private String select_username;//选点人员
     private  String step;//步骤
     private  String city;//城市
     private String villages;//乡镇

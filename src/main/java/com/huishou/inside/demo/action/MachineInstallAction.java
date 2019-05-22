@@ -163,8 +163,8 @@ public class MachineInstallAction {
         return beanJsonReturn;
     }
     @RequestMapping("/2version/m_install")
-    public BeanJsonReturn new2m_install(String machineno,String id,String remark){
-        machineInstallMapper.new2m_install(id,remark,machineno);
+    public BeanJsonReturn new2m_install(BeanMachineInstall beanMachineInstall){
+        machineInstallMapper.new2m_install(beanMachineInstall);
         BeanJsonReturn beanJsonReturn=new BeanJsonReturn();
         beanJsonReturn.setErrcode("1");
         return beanJsonReturn;

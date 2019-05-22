@@ -45,8 +45,8 @@ public interface MachineInstallMapper {
     List<Map<String,Object>> getStepCount();
     @Insert("insert into m_install_record (id,step,city,villages,Community,area,site,select_date,status,select_remark,order_no,latitude,longitude,select_username,area4code) VALUES (#{id},4,#{city},#{villages},#{Community},#{area},#{site},now(),'正常',#{remark},(select concat('MI',year(now()),MONTH(now()),extract(day_second from now()))),#{latitude},#{longitude},#{name},#{area4code})")
     void new2m_select(BeanMachineInstall beanMachineInstall);
-    @Update("UPDATE m_install_record t set t.step=6,t.installation_progress='完成',t.machine_no=#{machineno},t.installation_remark=#{remark},t.installation_date=NOW() where t.id=#{id}")
-    void new2m_install( @Param("id")String id, @Param("remark")String remark,@Param("machineno")String machineno);
+    @Update("UPDATE m_install_record t set t.step=6,t.installation_progress='完成',t.machine_no=#{machine_no},t.installation_remark=#{installremark},t.installation_date=NOW(),t.latitude=#{latitude},t.longitude=#{longitude},t.install_username=#{install_username} where t.id=#{id}")
+    void new2m_install( BeanMachineInstall beanMachineInstall);
     @Select("SELECT CONCAT(t.site,'-',t.Community,'-',t.area,'-',t.villages,'-',t.city)  AS title,t.order_no AS order_no,t.machine_no AS note,select_date as time   FROM m_install_record t WHERE t.step=4 ORDER BY t.select_date DESC")
     List<Map<String,String>> new2m_title1();
     @Select("SELECT CONCAT(t.site,'-',t.Community,'-',t.area,'-',t.villages,'-',t.city)  AS title,t.order_no AS order_no,t.machine_no AS note,t.installation_date as time  FROM m_install_record t WHERE t.step=6 and  t.is_cancellation=1 ORDER BY t.installation_date DESC")
